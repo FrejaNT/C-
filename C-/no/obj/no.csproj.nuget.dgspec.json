@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\corbe\\Documents\\C#\\C-\\no\\no.csproj": {}
+    "/home/freja-bermann/Documents/C#/C-/C-/no/no.csproj": {}
   },
   "projects": {
-    "C:\\Users\\corbe\\Documents\\C#\\C-\\no\\no.csproj": {
+    "/home/freja-bermann/Documents/C#/C-/C-/no/no.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\corbe\\Documents\\C#\\C-\\no\\no.csproj",
+        "projectUniqueName": "/home/freja-bermann/Documents/C#/C-/C-/no/no.csproj",
         "projectName": "no",
-        "projectPath": "C:\\Users\\corbe\\Documents\\C#\\C-\\no\\no.csproj",
-        "packagesPath": "C:\\Users\\corbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\corbe\\Documents\\C#\\C-\\no\\obj\\",
+        "projectPath": "/home/freja-bermann/Documents/C#/C-/C-/no/no.csproj",
+        "packagesPath": "/home/freja-bermann/.nuget/packages/",
+        "outputPath": "/home/freja-bermann/Documents/C#/C-/C-/no/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\corbe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/freja-bermann/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
