@@ -1,0 +1,15 @@
+/home/freja-bermann/Documents/C#/C-/C-/no/bin/Debug/net8.0/no
+/home/freja-bermann/Documents/C#/C-/C-/no/bin/Debug/net8.0/no.deps.json
+/home/freja-bermann/Documents/C#/C-/C-/no/bin/Debug/net8.0/no.runtimeconfig.json
+/home/freja-bermann/Documents/C#/C-/C-/no/bin/Debug/net8.0/no.dll
+/home/freja-bermann/Documents/C#/C-/C-/no/bin/Debug/net8.0/no.pdb
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.GeneratedMSBuildEditorConfig.editorconfig
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.AssemblyInfoInputs.cache
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.AssemblyInfo.cs
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.csproj.CoreCompileInputs.cache
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.sourcelink.json
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.dll
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/refint/no.dll
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.pdb
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/no.genruntimeconfig.cache
+/home/freja-bermann/Documents/C#/C-/C-/no/obj/Debug/net8.0/ref/no.dll
