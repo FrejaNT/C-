@@ -1,7 +1,7 @@
 using ICombatProfile;
 
 namespace EnemyProfile {
-    public class ECProfile {
+    public class ECProfile : IProfile {
         public string name {get;}
         public int health {
             get => health;

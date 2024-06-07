@@ -1,5 +1,5 @@
 namespace ICombatProfile {
-    public interface Profile {
+    public interface IProfile {
         string name {get;}
         int health {get; set;}
         int speed {get; set;}
