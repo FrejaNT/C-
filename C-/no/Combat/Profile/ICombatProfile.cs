@@ -4,5 +4,7 @@ namespace ICombatProfile {
         int health {get; set;}
         int speed {get; set;}
         int attackValue {get; set;}
+
+        void applyTurn (List<IProfile> friendlyTargets, List<IProfile> enemyTargets);
     }
 }

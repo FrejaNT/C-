@@ -7,38 +7,43 @@ namespace TL {
         protected bool head;
         public IProfile profile;
         public int speed;
+
+        public bool left;
         public TurnList next;
         public TurnList prev;
 
-        public TurnList (IProfile profile, int speed) {
+        public TurnList (IProfile profile, int speed, bool side) {
             head = true;
             this.profile = profile;
             this.speed = speed;
             next = this;
             prev = this;
+            left = side;
         }
-        private TurnList (IProfile profile, int speed, TurnList next, TurnList prev) {
+        private TurnList (IProfile profile, int speed, TurnList next, TurnList prev, bool side) {
             head = false;
             this.profile = profile;
             this.speed = speed;
             this.next = next;
             this.prev = prev;
+            left = side;
+
         }
 
-        public void Add (IProfile newProfile, int newSpeed) {
-            AddRecursion(newProfile, newSpeed, this);
+        public void Add (IProfile newProfile, int newSpeed, bool side) {
+            AddRecursion(newProfile, newSpeed, this, side);
         }
-        private void AddRecursion (IProfile newProfile, int newSpeed, TurnList first) {
+        private void AddRecursion (IProfile newProfile, int newSpeed, TurnList first, bool side) {
             if (Object.ReferenceEquals(profile, newProfile)) return;
             if (speed < newSpeed) {
                 TurnList temp = next;
-                next = new TurnList (profile, speed, temp, this);
+                next = new TurnList (profile, speed, temp, this, side);
             }
             if (speed >= newSpeed && next.head == false) {
-                next.AddRecursion(newProfile, newSpeed, first);
+                next.AddRecursion(newProfile, newSpeed, first, side);
             }
             if (speed >= newSpeed && next.head == true) {
-                next = new TurnList (newProfile, newSpeed, first, this);
+                next = new TurnList (newProfile, newSpeed, first, this, side);
                 first.prev = next;
             }
         }
@@ -110,6 +115,17 @@ namespace TL {
                 }
             }
             return first;
+        }
+        public void activateEvents (List<IProfile> friendlyTargets, List<IProfile> enemyTargets) {
+            if (next.head == true) return;
+            if (left == true) {
+                profile.applyTurn(friendlyTargets, enemyTargets);
+                next.activateEvents(friendlyTargets, enemyTargets);
+            }
+            else {
+                profile.applyTurn(enemyTargets, friendlyTargets);
+                next.activateEvents(friendlyTargets, enemyTargets);
+            }
         }
     }
 }

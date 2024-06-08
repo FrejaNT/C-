@@ -13,12 +13,15 @@ namespace CombatMain {
         public CombatEngine (List<IProfile> left, List<IProfile> right){
             this.left = left;
             this.right = right;
-            turnList = new TurnList(left[0], left[0].speed);
+            turnList = new TurnList(left[0], left[0].speed, true);
 
-            foreach (IProfile p in left) turnList.Add(p, p.speed);
-            foreach (IProfile p in right) turnList.Add(p,p.speed);
+            foreach (IProfile p in left) turnList.Add(p, p.speed, true);
+            foreach (IProfile p in right) turnList.Add(p, p.speed, false);
         }
 
+        public void startTurn () {
+            turnList.activateEvents(left,right);
+        }
 
     }
 }

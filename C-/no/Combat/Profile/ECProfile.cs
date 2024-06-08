@@ -22,5 +22,8 @@ namespace EnemyProfile {
             this.speed = speed;
             this.attackValue = attackValue;
         }
+        public void applyTurn (List<IProfile> friendlyTargets, List<IProfile> enemyTargets) {
+
+        }
     }
 }
