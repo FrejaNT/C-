@@ -1,3 +1,5 @@
+using IEntity;
+
 namespace ICombatProfile {
     public interface IProfile {
         string name {get;}
@@ -6,5 +8,7 @@ namespace ICombatProfile {
         int attackValue {get; set;}
 
         void applyTurn (List<IProfile> friendlyTargets, List<IProfile> enemyTargets);
+
+        public Entity toEntity();
     }
 }

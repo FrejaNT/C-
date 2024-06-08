@@ -17,9 +17,10 @@ namespace Enemy {
             set => attackValue = value;
         }
 
-        public EChar (string name, int maxHealth, int attackValue) {
+        public EChar (string name, int maxHealth, int speed, int attackValue) {
             this.name = name;
             this.maxHealth = maxHealth;
+            this.speed = speed;
             this.attackValue = attackValue;
         }
         
