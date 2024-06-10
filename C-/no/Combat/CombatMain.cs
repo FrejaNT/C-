@@ -9,7 +9,7 @@ namespace CombatMain {
     public class CombatEngine {
         private List<IProfile> left;
         private List<IProfile> right;
-        private ICombatPacket packet;
+        public ICombatPacket packet {get; set;}
         private TurnList turnList;
 
         public CombatEngine (List<IProfile> left, List<IProfile> right, ICombatPacket packet){
@@ -22,18 +22,20 @@ namespace CombatMain {
             foreach (IProfile p in right) turnList.Add(p, p.speed, false);
         }
 
-        public void startTurn () {
+        public bool startTurn () {
+            if (left.Count() == 0 && right.Count() == 0) return false;
             packet.clearLog();
             turnList.activateEvents(left, right);
             List<Entity> eLeft = new List<Entity>();
             List<Entity> eRight = new List<Entity>(); 
             foreach (IProfile p in left) {
+                Entity pe = p.toEntity();
                 if (p.health <= 0) {
                     left.Remove(p);
                     turnList.Delete(p);
-                    packet.writeLog(p.name + " has died!");
+                    packet.writeLog(pe, p.name + " has died!");
                 } else {
-                eLeft.Add(p.toEntity());
+                eLeft.Add(pe);
                 }
             }
             foreach (IProfile p in right) {
@@ -44,7 +46,7 @@ namespace CombatMain {
                     eRight.Add(p.toEntity());
                 }
             }
-
+            return true;
         }
 
     }
